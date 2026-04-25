@@ -1,0 +1,14 @@
+{
+  "name": "ActivityTest1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@discord/embedded-app-sdk": "^2.4.1",
+    "express": "^5.2.1",
+    "webpack": "^5.106.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^7.0.2"
+  }
+}
