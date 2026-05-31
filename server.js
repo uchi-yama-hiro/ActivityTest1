@@ -9,7 +9,10 @@ const PORT = 3000;
 // [Express] app.use()はミドルウェアを登録するExpressの構文
 // [Express] express.json()はリクエストボディをJSON形式で解析するExpressのミドルウェア
 app.use(express.json());
-
+app.use((req, res, next) => {
+  res.removeHeader('X-Frame-Options');
+  next();
+});
 // [Express] app.post()はHTTPのPOSTメソッドで'/api/token'へのリクエストを受け取ったときの処理を登録するExpressの構文
 // [JavaScript] asyncキーワードを付けることで非同期関数として定義する（内部でawaitが使用可能になる）
 // reqはリクエストオブジェクト（クライアントから送られた情報）、resはレスポンスオブジェクト（サーバーから返す情報）
